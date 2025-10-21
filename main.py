@@ -6,9 +6,11 @@ from flask import Flask
 app = Flask(__name__)
 bot = telebot.TeleBot(os.environ.get('BOT_TOKEN'))
 
+# Fortune database - complete business ideas
 fortunes = [
     "🚀 BUSINESS: 'AI Instagram Captions'\n💰 PRICE: €29 per 10 captions\n📝 PROMPT: 'Create 10 engaging Instagram captions for [niche] businesses'\n👥 CLIENT SCRIPT: 'Hi [Business], I'll create 10 converting captions for €29.'",
-    "🚀 BUSINESS: 'ChatGPT Prompt Pack'\n💰 PRICE: €17 one-time\n📝 PROMPT: 'Bundle 50 best prompts for viral content and marketing'\n👥 CLIENT SCRIPT: 'Get 50 proven prompts for €17 that actually work.'"
+    "🚀 BUSINESS: 'ChatGPT Prompt Pack'\n💰 PRICE: €17 one-time\n📝 PROMPT: 'Bundle 50 best prompts for viral content and marketing'\n👥 CLIENT SCRIPT: 'Get 50 proven prompts for €17 that actually work.'",
+    "🚀 BUSINESS: 'AI Headshot Service'\n💰 PRICE: €19 per photo\n📝 PROMPT: 'Transform casual photos into professional headshots'\n👥 CLIENT SCRIPT: 'Need professional headshots? I use AI to create studio-quality photos for €19.'"
 ]
 
 @app.route('/')
