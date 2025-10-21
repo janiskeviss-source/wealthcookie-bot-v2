@@ -30,7 +30,12 @@ def home():
 def start(message):
     markup = telebot.types.InlineKeyboardMarkup()
     
-    btn_pay = telebot.types.InlineKeyboardButton("🎰 Get Fortune (€1)", callback_data="get_fortune")
+    # PASTE YOUR STRIPE LINK HERE
+    btn_pay = telebot.types.InlineKeyboardButton(
+        "🎰 Get Fortune (€1)", 
+        url="https://buy.stripe.com/YOUR_ACTUAL_LINK_HERE"
+    )
+    
     btn_preview = telebot.types.InlineKeyboardButton("👀 See Example", callback_data="free_preview")
     btn_subscribe = telebot.types.InlineKeyboardButton("📅 Daily Fortunes", callback_data="subscribe")
     
@@ -43,7 +48,7 @@ def start(message):
                     "*Your €1 ticket to financial freedom*\n\n"
                     "🔮 Pay €1 → Get proven money method\n"
                     "💸 Execute → Profit → Repeat\n"
-                    "🚀 3,000+ fortunes delivered\n\n"
+                    "🚀 Secure Stripe checkout\n\n"
                     "*This car started with one €1 decision...*",
                     reply_markup=markup,
                     parse_mode='Markdown')
