@@ -30,10 +30,9 @@ def home():
 def start(message):
     markup = telebot.types.InlineKeyboardMarkup()
     
-    # PASTE YOUR STRIPE LINK HERE
     btn_pay = telebot.types.InlineKeyboardButton(
         "🎰 Get Fortune (€1)", 
-        url="https://buy.stripe.com/YOUR_ACTUAL_LINK_HERE"
+        url="https://buy.stripe.com/dRm7sM7S1h2q9igeKU3VC00"
     )
     
     btn_preview = telebot.types.InlineKeyboardButton("👀 See Example", callback_data="free_preview")
